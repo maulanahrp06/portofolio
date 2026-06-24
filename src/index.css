@@ -4,12 +4,14 @@
 
 @layer base {
   html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto !important;
+    overflow-y: auto;
   }
   body {
     @apply font-inter antialiased overflow-x-hidden;
     background: #0a0f0a;
     color: #e8f0e8;
+    overflow-y: auto;
   }
 }
 
