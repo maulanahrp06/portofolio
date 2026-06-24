@@ -9,7 +9,7 @@ const skillData = [
   { name: 'Data Structures', pct: 75, tools: ['Algorithms', 'Complexity'] },
   { name: 'DevOps & Tools', pct: 70, tools: ['Git'] },
   { name: 'UI/UX Design', pct: 70, tools: ['Figma'] },
-  { name: 'HTML', pct: 70, tools: ['Figma'] },
+  { name: 'HTML', pct: 70, tools: [] },
 ];
 
 const container = {
