@@ -36,7 +36,7 @@ export default function Intro({ onComplete }) {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="text-light/40 text-sm md:text-base mt-4 tracking-widest"
           >
-            PORTFOLIO
+            PORTOFOLIO
           </motion.p>
           <motion.div
             initial={{ width: 0 }}
