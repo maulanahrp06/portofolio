@@ -30,10 +30,12 @@ export default function Navbar() {
       }`}
     >
       <div className="container mx-auto px-4 md:px-8 flex items-center justify-between h-16">
+        {/* LOGO */}
         <a href="#" className="text-2xl font-extrabold bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">
-          <span className="text-light/40">.</span>
+          Maulana<span className="text-light/40">.</span>
         </a>
 
+        {/* DESKTOP MENU - TANPA HIRE ME */}
         <ul className="hidden md:flex items-center gap-8 text-sm font-medium text-light/70">
           {navItems.map((item) => (
             <li key={item.href}>
@@ -43,9 +45,9 @@ export default function Navbar() {
               </a>
             </li>
           ))}
-          
         </ul>
 
+        {/* HAMBURGER BUTTON (MOBILE) */}
         <button
           className="md:hidden flex flex-col gap-1.5 p-2"
           onClick={() => setIsOpen(!isOpen)}
@@ -57,6 +59,7 @@ export default function Navbar() {
         </button>
       </div>
 
+      {/* MOBILE MENU - TANPA HIRE ME */}
       <motion.div
         initial={false}
         animate={{ height: isOpen ? 'auto' : 0, opacity: isOpen ? 1 : 0 }}
@@ -71,15 +74,7 @@ export default function Navbar() {
               </a>
             </li>
           ))}
-          <li>
-            <a
-              href="#contact"
-              onClick={() => setIsOpen(false)}
-              className="bg-gradient-to-r from-primary to-secondary px-6 py-2 rounded-full text-white font-semibold"
-            >
-              Hire Me
-            </a>
-          </li>
+          {/* HIRE ME DI MOBILE SUDAH DIHAPUS */}
         </ul>
       </motion.div>
     </motion.nav>
