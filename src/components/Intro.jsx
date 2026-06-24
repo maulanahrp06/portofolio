@@ -20,24 +20,27 @@ export default function Intro({ onComplete }) {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0, scale: 0.8 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
-          className="fixed inset-0 z-[999] flex flex-col items-center justify-center bg-dark"
+          className="fixed inset-0 z-[999] flex flex-col items-center justify-center bg-dark px-4"
         >
+          {/* HANYA UKURAN FONT YANG DIUBAH */}
           <motion.h1
             initial={{ scale: 0.5, opacity: 0, y: 20 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
-            className="text-6xl md:text-8xl font-extrabold bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent"
+            className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent text-center"
           >
             Maulana Iksan
           </motion.h1>
+
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="text-light/40 text-sm md:text-base mt-4 tracking-widest"
+            className="text-light/40 text-sm sm:text-base md:text-lg mt-3 tracking-[0.3em] uppercase text-center"
           >
             PORTOFOLIO
           </motion.p>
+
           <motion.div
             initial={{ width: 0 }}
             animate={{ width: '60%' }}
