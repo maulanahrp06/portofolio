@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
@@ -30,12 +31,17 @@ export default function Navbar() {
       }`}
     >
       <div className="container mx-auto px-4 md:px-8 flex items-center justify-between h-16">
-        {/* LOGO */}
-        <a href="#" className="text-2xl font-extrabold bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">
+      
+        <a 
+          href="#" 
+          className={`text-2xl font-extrabold bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent transition-opacity duration-300 ${
+            scrolled ? 'opacity-0' : 'opacity-100'
+          }`}
+        >
           Maulana<span className="text-light/40">.</span>
         </a>
 
-        {/* DESKTOP MENU - TANPA HIRE ME */}
+        {/* DESKTOP MENU */}
         <ul className="hidden md:flex items-center gap-8 text-sm font-medium text-light/70">
           {navItems.map((item) => (
             <li key={item.href}>
@@ -47,7 +53,7 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* HAMBURGER BUTTON (MOBILE) */}
+      
         <button
           className="md:hidden flex flex-col gap-1.5 p-2"
           onClick={() => setIsOpen(!isOpen)}
@@ -59,7 +65,7 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* MOBILE MENU - TANPA HIRE ME */}
+  
       <motion.div
         initial={false}
         animate={{ height: isOpen ? 'auto' : 0, opacity: isOpen ? 1 : 0 }}
@@ -74,7 +80,6 @@ export default function Navbar() {
               </a>
             </li>
           ))}
-          {/* HIRE ME DI MOBILE SUDAH DIHAPUS */}
         </ul>
       </motion.div>
     </motion.nav>
