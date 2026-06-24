@@ -29,7 +29,7 @@ export default function Navbar() {
         scrolled ? 'bg-dark/80 backdrop-blur-xl shadow-lg' : 'bg-transparent'
       }`}
     >
-      <div className="container mx-auto px-4 md:px-8 flex items-center justify-between h-16">
+      <div className="container mx-auto px-4 md:px-8 flex items-center justify-end h-16">
        
 
        
